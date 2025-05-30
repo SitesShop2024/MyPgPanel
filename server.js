@@ -151,7 +151,6 @@ app.get('/debug/about', (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  if (req.session.admin) return res.redirect("/admin");
   res.render("login", { error: null });
 });
 
