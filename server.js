@@ -11,11 +11,8 @@ const PORT = process.env.PORT || 3000;
 
 // Конфигурация базы данных (лучше вынести в переменные окружения)
 const dbConfig = {
-  user: process.env.DB_USER || "postgres",
-  host: process.env.DB_HOST || "localhost",
-  database: process.env.DB_NAME || "admindb",
-  password: process.env.DB_PASSWORD || "Centrino135",
-  port: process.env.DB_PORT || 5432,
+  connectionString: process.env.DATABASE_URL, 
+  ssl: { rejectUnautorized: false }
 };
 
 const client = new Client(dbConfig);
