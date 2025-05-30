@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Admin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="addAdmin.css" />
+    <style>
+      .roles{
+        display: flex;
+        flex-direction: column;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li><a href="/admin">Admin Panel</a></li>
+    </ul>
+    <div class="form">
+      <form action="/addAdmin" method="POST">
+        <label>Add New Admin</label>
+        <input type="text" name="username" required/>
+        <input type="text" name="password" required/>
+        <label>Role</label>
+        <div class="roles">
+          <p>Moderator: 1</p>
+          <p>Admin: 2</p>
+          <p>MainAdmin: 3</p>
+        </div>
+        <input type="text" name="role" required>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </body>
+</html>

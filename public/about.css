@@ -1,0 +1,17 @@
+p{
+    width: 800px;
+    text-align: center;
+    font-size: 22px;
+}
+.text{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 768px){
+    p{
+        width: 80vw;
+    }
+}

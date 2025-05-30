@@ -1,0 +1,13 @@
+form{
+    height: 300px;
+    width: auto;
+}
+label{
+    color: black;
+}
+input{
+    width: 500px;
+}
+button{
+    width: 200px;
+}

@@ -1,0 +1,10 @@
+.form{
+    margin-top: 50px;
+}
+form{
+    background-color: white;
+    height: 500px;
+}
+label{
+    color: black;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit content</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="MainPageEdit.css">
+</head>
+<body>
+    <ul>
+        <li><a href="/admin">Admin Panel</a></li>
+        <li><a href="/gallery">Gallery of this website</a></li>
+        <li><a href="/">Main Page</a></li>
+        <li><a href="/addAdmin">Add New Admin</a></li>
+        <li><a href="/deleteAdmin">Delete Admin</a></li>
+    </ul>
+    <h1>Edit Main Page</h1>
+
+    <div class="form">
+        <form action="/editMainPage" method="POST">
+            <label>Main Title</label>
+            <textarea type="text" name="h1" required><%= MainPageContent.h1 %></textarea>
+            <label>Text №1</label>
+            <textarea type="text" name="p1" required><%= MainPageContent.p1 %></textarea>
+            <label>Text №2</label>
+            <textarea type="text" name="p2" required><%= MainPageContent.p2 %></textarea>
+            <label>Text №3</label>
+            <textarea type="text" name="p3" required><%= MainPageContent.p3 %></textarea>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
