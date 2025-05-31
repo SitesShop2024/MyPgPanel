@@ -5,15 +5,15 @@ form{
 label{
     color: black;
 }
-input{
+textarea{
     width: 500px;
     border: none;
     background: none;
 }
-input:focus{
+textarea:focus{
     border: 1px solid black;
 }
-input:not(:focus){
+textarea:not(:focus){
     border: none;    
 }
 button{
