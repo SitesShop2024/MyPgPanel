@@ -19,13 +19,9 @@
 
     <div class="form">
         <form action="/editMainPage" method="POST">
-            <label>Main Title</label>
             <textarea type="text" name="h1" required><%= MainPageContent.h1 %></textarea>
-            <label>Text №1</label>
             <textarea type="text" name="p1" required><%= MainPageContent.p1 %></textarea>
-            <label>Text №2</label>
             <textarea type="text" name="p2" required><%= MainPageContent.p2 %></textarea>
-            <label>Text №3</label>
             <textarea type="text" name="p3" required><%= MainPageContent.p3 %></textarea>
             <button type="submit">Save</button>
         </form>
