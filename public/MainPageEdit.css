@@ -24,4 +24,7 @@ button{
     form{
         width: 80vw;
     }
+    textarea{
+        width: 75vw;
+    }
 }
