@@ -10,6 +10,7 @@ textarea{
     width: 500px;
     border: none;
     background: none;
+    color: white;
 }
 textarea:focus{
     border: 1px solid black;
