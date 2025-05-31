@@ -22,6 +22,6 @@ button{
 
 @media(max-width: 768px){
     form{
-        width: 400px;
+        width: 80vw;
     }
 }
