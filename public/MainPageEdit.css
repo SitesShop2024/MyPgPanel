@@ -7,6 +7,14 @@ label{
 }
 input{
     width: 500px;
+    border: none;
+    background: none;
+}
+input:focus{
+    border: 1px solid black;
+}
+input:not(:focus){
+    border: none;    
 }
 button{
     width: 200px;
