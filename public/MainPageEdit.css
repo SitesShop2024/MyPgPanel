@@ -19,3 +19,9 @@ textarea:not(:focus){
 button{
     width: 200px;
 }
+
+@media(max-width: 768px){
+    form{
+        width: 400px;
+    }
+}
