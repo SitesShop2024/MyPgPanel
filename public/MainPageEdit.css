@@ -1,6 +1,7 @@
 form{
     height: 300px;
     width: auto;
+    background: none;
 }
 label{
     color: black;
