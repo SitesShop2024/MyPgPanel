@@ -12,8 +12,9 @@ const PORT = process.env.PORT || 3000;
 // Конфигурация базы данных (лучше вынести в переменные окружения)
 const dbConfig = {
   connectionString: process.env.DATABASE_URL, 
-  ssl: { rejectUnautorized: false }
+  ssl: { rejectUnauthorized: false }
 };
+
 
 const client = new Client(dbConfig);
 
