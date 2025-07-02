@@ -1,34 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit content</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="MainPageEdit.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="MainPageEdit.css" />
+  </head>
+  <body>
     <ul>
-        <li><a href="/admin">Admin Panel</a></li>
-        <li><a href="/gallery">Gallery of this website</a></li>
-        <li><a href="/">Main Page</a></li>
-        <li><a href="/addAdmin">Add New Admin</a></li>
-        <li><a href="/deleteAdmin">Delete Admin</a></li>
+      <li><a href="/admin">Admin Panel</a></li>
+      <li><a href="/gallery">Gallery of this website</a></li>
+      <li><a href="/">Main Page</a></li>
+      <li><a href="/addAdmin">Add New Admin</a></li>
+      <li><a href="/deleteAdmin">Delete Admin</a></li>
     </ul>
     <h1>Edit Main Page</h1>
 
     <div class="form">
-        <form action="/editMainPage" method="POST">
-            <label>Main Title</label>
-            <textarea type="text" name="h1" required><%= MainPageContent.h1 %></textarea>
-            <label>Text №1</label>
-            <textarea type="text" name="p1" required><%= MainPageContent.p1 %></textarea>
-            <label>Text №2</label>
-            <textarea type="text" name="p2" required><%= MainPageContent.p2 %></textarea>
-            <label>Text №3</label>
-            <textarea type="text" name="p3" required><%= MainPageContent.p3 %></textarea>
-            <button type="submit">Save</button>
-        </form>
+      <form action="/editMainPage" method="POST">
+        <div class="navlinks">
+          <div>
+            <label>Navbar Link</label>
+            <textarea type="text" name="navlink1" required>
+  <%= MainPageContent.navlink1 %></textarea
+            >
+          </div>
+          <div>
+            <label>Navbar Link</label>
+            <textarea type="text" name="navlink2" required>
+  <%= MainPageContent.navlink2 %></textarea
+            >
+          </div>
+          <div>
+            <label>Navbar Link</label>
+            <textarea type="text" name="navlink3" required>
+  <%= MainPageContent.navlink3 %></textarea
+            >
+          </div>
+          <div>
+            <label>Navbar Link</label>
+            <textarea type="text" name="navlink4" required>
+  <%= MainPageContent.navlink4 %></textarea
+            >
+          </div>
+        </div>
+        <div class="Slides">
+          <div>
+            <label>Slide 1</label>
+            <textarea type="text" name="slide1" required>
+<%= MainPageContent.slide1 %></textarea
+            >
+          </div>
+          <div>
+            <label>Slide 2</label>
+            <textarea type="text" name="slide2" required>
+<%= MainPageContent.slide2 %></textarea
+            >
+          </div>
+          <div>
+            <label>Slide 3</label>
+            <textarea type="text" name="slide3" required>
+<%= MainPageContent.slide3 %></textarea
+            >
+          </div>
+        </div>
+        <div class="about">
+          <div>
+            <label>About Us title</label>
+            <textarea name="abouth1" required>
+<%= MainPageContent.abouth1 %></textarea
+            >
+          </div>
+          <div>
+            <label>About Us text</label>
+            <textarea name="aboutp" required>
+<%= MainPageContent.aboutp %></textarea
+            >
+          </div>
+        </div>
+        <div class="services">
+          <div>
+            <label>Services title</label>
+            <textarea name="servicesh1" required>
+<%= MainPageContent.servicesh1 %></textarea
+            >
+          </div>
+          <div class="servicecards">
+            <div class="servicecard">
+              <div>
+                <label>Service card title</label>
+                <textarea name="servicecardh2_1" required>
+<%= MainPageContent.servicecardh2_1 %></textarea
+                >
+              </div>
+              <div>
+                <label>Service card text</label>
+                <textarea name="servicecardp1" required>
+<%= MainPageContent.servicecardp1 %></textarea
+                >
+              </div>
+            </div>
+            <div class="servicecard">
+              <div>
+                <label>Service card title</label>
+                <textarea name="servicecardh2_2" required>
+<%= MainPageContent.servicecardh2_2 %></textarea
+                >
+              </div>
+              <div>
+                <label>Service card text</label>
+                <textarea name="servicecardp2" required>
+<%= MainPageContent.servicecardp2 %></textarea
+                >
+              </div>
+            </div>
+            <div class="servicecard">
+              <div>
+                <label>Service card title</label>
+                <textarea name="servicecardh2_3" required>
+<%= MainPageContent.servicecardh2_3 %></textarea
+                >
+              </div>
+              <div>
+                <label>Service card text</label>
+                <textarea name="servicecardp3" required>
+<%= MainPageContent.servicecardp3 %></textarea
+                >
+              </div>
+            </div>
+            <br /><br />
+          </div>
+          <div>
+            <label>See More Button text</label>
+            <textarea name="seemorebtn" required>
+<%= MainPageContent.seemorebtn %></textarea
+            >
+          </div>
+        </div>
+        <div class="Advantages">
+          <div>
+            <label>Advantages Title</label>
+            <textarea name="advantagesh1" required>
+<%= MainPageContent.advantagesh1 %></textarea
+            >
+          </div>
+          <br />
+          <label>Advantages Cards</label>
+          <br />
+          <div class="AdvantagesCards">
+            <div>
+              <label>Card 1</label>
+              <textarea name="advantagecardh1_1" required>
+<%= MainPageContent.advantagecardh1_1 %></textarea
+              >
+              <textarea name="advantagecardp1" required>
+<%= MainPageContent.advantagecardp1 %></textarea
+              >
+            </div>
+            <div>
+              <label>Card 2</label>
+              <textarea name="advantagecardh1_2" required>
+<%= MainPageContent.advantagecardh1_2 %></textarea
+              >
+              <textarea name="advantagecardp2" required>
+<%= MainPageContent.advantagecardp2 %></textarea
+              >
+            </div>
+            <div>
+              <label>Card 3</label>
+              <textarea name="advantagecardh1_3" required>
+<%= MainPageContent.advantagecardh1_3 %></textarea
+              >
+              <textarea name="advantagecardp3" required>
+<%= MainPageContent.advantagecardp3 %></textarea
+              >
+            </div>
+          </div>
+        </div>
+        <div class="quality">
+          <label>Quality</label>
+          <textarea name="qualityh1" required>
+<%= MainPageContent.qualityh1 %></textarea
+          >
+          <br /><br />
+          <div>
+            <label>Quality Video</label>
+            <textarea name="video" required>
+<%= MainPageContent.video %></textarea
+            >
+            <iframe
+              width="800"
+              height="400"
+              src="<%= MainPageContent.video %>"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="contacts1">
+          <div>
+            <label>Contacts</label>
+            <textarea name="contacth1" required>
+<%= MainPageContent.contacth1 %></textarea
+            >
+          </div>
+          <div class="Contacts">
+            <div>
+              <label>Email</label>
+              <textarea name="email" required>
+  <%= MainPageContent.email %></textarea
+              >
+            </div>
+            <div>
+              <label>Phone</label>
+              <textarea name="phone" required>
+  <%= MainPageContent.phone %></textarea
+              >
+            </div>
+          </div>
+          <div>
+            <label>CallUs Link(number)</label>
+            <textarea name="calluslink" required>
+<%= MainPageContent.calluslink %></textarea
+            >
+          </div>
+          <div>
+            <label>CallUs Button text</label>
+            <textarea name="callustext" required>
+<%= MainPageContent.callustext %></textarea
+            >
+          </div>
+        </div>
+        <div class="news">
+          <label style="font-size: 28px"><b>NEWS</b></label>
+          <br /><br />
+          <div>
+            <label>Title</label>
+            <textarea name="newsh1" required>
+<%= MainPageContent.newsh1 %></textarea
+            >
+          </div>
+          <br /><br />
+          <label>News Cards</label>
+          <br />
+          <div class="newsCards">
+            <div>
+              <label>Card1</label>
+              <textarea name="newcardh2_1" required>
+  <%= MainPageContent.newcardh2_1 %></textarea
+              >
+              <label>Card text</label>
+              <textarea name="newcardp1" required>
+  <%= MainPageContent.newcardp1 %></textarea
+              >
+            </div>
+            <br />
+            <div>
+              <label>Card2</label>
+              <textarea name="newcardh2_2" required>
+  <%= MainPageContent.newcardh2_2 %></textarea
+              >
+              <label>Card text</label>
+              <textarea name="newcardp2" required>
+  <%= MainPageContent.newcardp2 %></textarea
+              >
+            </div>
+            <br />
+            <div>
+              <label>Card3</label>
+              <textarea name="newcardh2_3" required>
+  <%= MainPageContent.newcardh2_3 %></textarea
+              >
+              <label>Card text</label>
+              <textarea name="newcardp3" required>
+  <%= MainPageContent.newcardp3 %></textarea
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <label>Footer</label>
+          <br />
+          <div style="flex-direction: row; gap: 50px">
+            <div>
+              <label>Title</label>
+              <textarea name="footerh1" required>
+  <%= MainPageContent.footerh1 %></textarea
+              >
+            </div>
+            <div>
+              <label>Footer text</label>
+              <textarea name="footerp" required>
+  <%= MainPageContent.footerp %></textarea
+              >
+            </div>
+          </div>
+        </div>
+        <div class="images">
+          <label>Images(link to images)</label>
+          <br />
+          <hr />
+          <br />
+          <div class="imgrow">
+            <div>
+              <label>About US | Image 1</label>
+              <textarea name="img1" required>
+  <%= MainPageContent.img1 %></textarea
+              >
+              <img src="<%= MainPageContent.img1 %>" alt="" />
+            </div>
+            <br />
+            <div>
+              <label>ServiceCard 1 | Image 2</label>
+              <textarea name="img2" required>
+  <%= MainPageContent.img2 %></textarea
+              >
+              <img src="<%= MainPageContent.img2 %>" alt="" />
+            </div>
+          </div>
+          <br />
+          <div class="imgrow">
+            <div>
+              <label>ServiceCard 2 | Image 3</label>
+              <textarea name="img3" required>
+  <%= MainPageContent.img3 %></textarea
+              >
+              <img src="<%= MainPageContent.img3 %>" alt="" />
+            </div>
+            <br />
+            <div>
+              <label>ServiceCard 3 | Image 4</label>
+              <textarea name="img4" required>
+  <%= MainPageContent.img4 %></textarea
+              >
+              <img src="<%= MainPageContent.img4 %>" alt="" />
+            </div>
+          </div>
+          <br />
+          <div class="imgrow">
+            <div>
+              <label>AdvantageCard 1 | Image 5</label>
+              <textarea name="img5" required>
+  <%= MainPageContent.img5 %></textarea
+              >
+              <img src="<%= MainPageContent.img5 %>" alt="" />
+            </div>
+            <br />
+            <div>
+              <label>AdvantageCard 2 | Image 6</label>
+              <textarea name="img6" required>
+  <%= MainPageContent.img6 %></textarea
+              >
+              <img src="<%= MainPageContent.img6 %>" alt="" />
+            </div>
+          </div>
+          <br />
+          <div class="Lastimgrow">
+            <div>
+              <label>AdvantageCard 3 | Image 7</label>
+              <textarea name="img7" required>
+  <%= MainPageContent.img7 %></textarea
+              >
+              <img src="<%= MainPageContent.img7 %>" alt="" />
+            </div>
+          </div>
+        </div>
+        <button type="submit">Save</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>

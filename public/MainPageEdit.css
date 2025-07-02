@@ -1,6 +1,14 @@
+ul{
+    position: relative;
+    top: 70px;
+}
 form{
-    height: 300px;
+    position: relative;
+    top: 20px;
+    height: 4200px;
     width: auto;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 label{
     color: black;
@@ -10,4 +18,88 @@ input{
 }
 button{
     width: 200px;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+.form{
+    top: 50px;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.navlinks{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.Slides{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+.services{
+    gap: 30px;
+}
+.servicecards{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.Advantages{
+    margin-bottom: 50px;
+}
+.AdvantagesCards{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.quality{
+    margin-bottom: 70px;
+}
+
+.contacts1{
+    gap: 0;
+    margin: 70px;
+}
+.Contacts{
+    flex-direction: row;
+}
+
+.news{
+    margin-bottom: 70px;
+}
+.newsCards{
+    flex-direction: row;
+    gap: 30px;
+}
+
+.footer{
+    margin-bottom: 100px;
+}
+
+.imgrow{
+    flex-direction: row;
+    gap: 70px;
+}
+.Lastimgrow{
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+img{
+    width: 300px;
+    height: 300px;
 }

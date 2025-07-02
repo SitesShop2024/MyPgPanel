@@ -7,16 +7,158 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <%- include('navbar') %>
-    <br />
-    <h1><%= MainPageContent.h1 %></h1>
-    <br />
-    <div class="text">
-      <p><%= MainPageContent.p1 %></p>
-      <p><%= MainPageContent.p2 %></p>
-      <p><%= MainPageContent.p3 %></p>
-    </div>
-
-    S
+    <header>
+      <nav>
+        <ul>
+          <li><a href=""><%= MainPageContent.navlink1 %></a></li>
+          <li><a href=""><%= MainPageContent.navlink2 %></a></li>
+          <li><a href=""><%= MainPageContent.navlink3 %></a></li>
+          <li><a href=""><%= MainPageContent.navlink4 %></a></li>
+        </ul>
+      </nav>
+      <div class="header">
+        <div class="slider">
+          <div class="slides">
+            <div class="slide"><%= MainPageContent.slide1 %></div>
+            <div class="slide"><%= MainPageContent.slide2 %></div>
+            <div class="slide"><%= MainPageContent.slide3 %></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="AboutUs">
+        <div>
+          <h1><%= MainPageContent.abouth1 %></h1>
+          <br />
+          <p><%= MainPageContent.aboutp %></p>
+        </div>
+        <div class="img">
+          <img src="<%= MainPageContent.img1 %>" alt="" />
+        </div>
+      </section>
+      <section class="services">
+        <h1><%= MainPageContent.servicesh1 %></h1>
+        <div class="cards">
+          <div class="card">
+            <div class="img">
+              <img src="<%= MainPageContent.img2 %>" alt="" />
+            </div>
+            <h2><%= MainPageContent.servicecardh2_1 %></h2>
+            <p><%= MainPageContent.servicecardp1 %></p>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="<%= MainPageContent.img3 %>" alt="" />
+            </div>
+            <h2><%= MainPageContent.servicecardh2_2 %></h2>
+            <p><%= MainPageContent.servicecardp2 %></p>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="<%= MainPageContent.img4 %>" alt="" />
+            </div>
+            <h2><%= MainPageContent.servicecardh2_3 %></h2>
+            <p><%= MainPageContent.servicecardp3 %></p>
+          </div>
+        </div>
+        <br /><br /><br />
+        <a href="/about"><%= MainPageContent.seemorebtn %></a>
+      </section>
+      <section class="advantages">
+        <h1><%= MainPageContent.advantagesh1 %></h1>
+        <div class="advantagesCards">
+          <div class="cardWorks">
+            <div class="img">
+              <img src="<%= MainPageContent.img5 %>" alt="" />
+            </div>
+            <div>
+              <h1><%= MainPageContent.advantagecardh1_1 %></h1>
+              <p><%= MainPageContent.advantagecardp1 %></p>
+            </div>
+          </div>
+          <div class="cardWorks">
+            <div>
+              <h1><%= MainPageContent.advantagecardh1_2 %></h1>
+              <p><%= MainPageContent.advantagecardp2 %></p>
+            </div>
+            <div class="img">
+              <img src="<%= MainPageContent.img6 %>" alt="" />
+            </div>
+          </div>
+          <div class="cardWorks">
+            <div class="img">
+              <img src="<%= MainPageContent.img7 %>" alt="" />
+            </div>
+            <div>
+              <h1><%= MainPageContent.advantagecardh1_3 %></h1>
+              <p><%= MainPageContent.advantagecardp3 %></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="Difficulty">
+        <h1><%= MainPageContent.qualityh1 %></h1>
+        <iframe
+          width="800"
+          height="400"
+          src="<%= MainPageContent.video %>"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <section class="Contacts">
+        <h1><%= MainPageContent.contacth1 %></h1>
+        <p><%= MainPageContent.email %></p>
+        <p><%= MainPageContent.phone %></p>
+        <a
+          href="https://wa.me/<%= MainPageContent.calluslink %>"
+          target="_blank"
+          ><%= MainPageContent.callustext %></a
+        >
+      </section>
+      <section class="news">
+        <h1><%= MainPageContent.newsh1 %></h1>
+        <div class="cards">
+          <div class="card">
+            <h2><%= MainPageContent.newcardh2_1 %></h2>
+            <p><%= MainPageContent.newcardp1 %></p>
+          </div>
+          <div class="card">
+            <h2><%= MainPageContent.newcardh2_2 %></h2>
+            <p><%= MainPageContent.newcardp2 %></p>
+          </div>
+          <div class="card">
+            <h2><%= MainPageContent.newcardh2_3 %></h2>
+            <p><%= MainPageContent.newcardp3 %></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h1><%= MainPageContent.footerh1 %></h1>
+      <p><%= MainPageContent.footerp %></p>
+    </footer>
   </body>
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      const slidesContainer = document.querySelector(".slides");
+      const offset = -index * 100;
+      slidesContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 5000); // каждые 5 секунд
+  </script>
 </html>
