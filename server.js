@@ -11,7 +11,11 @@ const PORT = process.env.PORT || 3000;
 
 // Конфигурация базы данных (лучше вынести в переменные окружения)
 const dbConfig = {
+<<<<<<< HEAD
   connectionString: process.env.DB_URL, 
+=======
+  connectionString: process.env.DATABASE_URL, 
+>>>>>>> ec309749911605efe33f86ddf99666add861ede7
   ssl: { rejectUnautorized: false }
 };
 
@@ -187,10 +191,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "secret_key",
+    secret: "secret_key",
     resave: false,
     saveUninitialized: true,
+<<<<<<< HEAD
     cookie: { secure: process.env.NODE_ENV === "production" },
+=======
+>>>>>>> ec309749911605efe33f86ddf99666add861ede7
   })
 );
 
@@ -248,7 +255,6 @@ app.get("/debug/about", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  if (req.session.admin) return res.redirect("/admin");
   res.render("login", { error: null });
 });
 
