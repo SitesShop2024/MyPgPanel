@@ -194,6 +194,8 @@ app.use(
     cookie: { secure: process.env.NODE_ENV === "development" },
   })
 );
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
+
 
 // Мидлвары для проверки аутентификации и ролей
 function checkAuth(req, res, next) {
