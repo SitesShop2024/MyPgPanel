@@ -190,10 +190,7 @@ app.use(
     secret: "secret_key",
     resave: false,
     saveUninitialized: true,
-<<<<<<< HEAD
     cookie: { secure: process.env.NODE_ENV === "production" },
-=======
->>>>>>> ec309749911605efe33f86ddf99666add861ede7
   })
 );
 
