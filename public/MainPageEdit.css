@@ -113,11 +113,121 @@ img{
     height: 300px;
 }
 
-@media(max-width: 768px){
-    form{
-        width: 80vw;
-    }
-    textarea{
-        width: 75vw;
-    }
+@media (max-width: 768px) {
+  div {
+    width: 100%;
+  }
+  form {
+    width: 80vw;
+    height: 5740px;
+  }
+  textarea {
+    width: 100%;
+  }
+  .navlinks {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+  .Slides {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .about {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .services {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+  .servicecards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .Advantages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .AdvantagesCards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+  .quality {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .contacts1 {
+    width: 100%;
+    gap: 0;
+    margin: 70px;
+    margin-top: 0;
+  }
+  .Contacts{
+    margin-bottom: 40px;
+  }
+
+  .news {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+  .newsCards {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footerEdith1{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .footerContent{
+    flex-direction: column;
+  }
+  iframe{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+  }
+
+  .imgrow {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .imgrow div{
+    gap: 20px;
+  }
+  .Lastimgrow {
+    justify-content: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
