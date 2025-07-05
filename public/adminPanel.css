@@ -12,3 +12,9 @@ div{
 button{
     width: 150px;
 }
+@media(max-width: 768px){
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
