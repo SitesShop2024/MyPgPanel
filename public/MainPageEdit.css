@@ -114,6 +114,11 @@ img{
 }
 
 @media (max-width: 768px) {
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
   div {
     width: 100%;
   }
