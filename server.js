@@ -230,10 +230,18 @@ app.get("/about", (req, res) => {
       console.error(err);
       return res.status(500).send("Server error");
     }
-    res.render("about", {
+    const AboutPageContent = result.rows[0];
+    client.query("SELECT * FROM MainPageContent LIMIT 1", (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Server error");
+    }
+      res.render("about", {
       title: "About Us",
-      AboutPageContent: result.rows[0],
+      AboutPageContent: AboutPageContent,
+        MainPageContent: result.rows[0],
     });
+  });
   });
 });
 // Добавьте этот временный маршрут для проверки данных
@@ -379,7 +387,15 @@ app.get("/editAboutPage", checkAuth, checkRole(2), (req, res) => {
       console.error(err);
       return res.status(500).send("Server error");
     }
-    res.render("editAboutPage", { AboutPageContent: result.rows[0] });
+    const AboutPageContent = result.rows[0];
+    client.query("SELECT * FROM AboutPageContent LIMIT 1", (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Server error");
+    }
+    
+      res.render("editAboutPage", { MainPageContent: result.rows[0], AboutPageContent: AboutPageContent });
+    });
   });
 });
 
