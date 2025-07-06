@@ -334,7 +334,7 @@ app.post("/editMainPage", checkAuth, checkRole(2), (req, res) => {
     newsh1, newcardh2_1, newcardp1,
     newcardh2_2, newcardp2,
     newcardh2_3, newcardp3,
-    footerh1, footerp, img1, img2, img3, img4, img5, img6, img7, video } = req.body;
+    footerh1, footerp, img1, img2, img3, img4, img5, img6, img7, video, bgcolor, color } = req.body;
   client.query(
     `UPDATE MainPageContent SET 
       navlink1 = $1, navlink2 = $2, navlink3 = $3, navlink4 = $4,
@@ -353,7 +353,7 @@ app.post("/editMainPage", checkAuth, checkRole(2), (req, res) => {
       newsh1 = $31, newcardh2_1 = $32, newcardp1 = $33,
       newcardh2_2 = $34, newcardp2 = $35,
       newcardh2_3 = $36, newcardp3 = $37,
-      footerh1 = $38, footerp = $39, img1 = $40, img2 = $41, img3 = $42, img4 = $43, img5 = $44, img6 = $45, img7 = $46, video = $47 WHERE id = 1
+      footerh1 = $38, footerp = $39, img1 = $40, img2 = $41, img3 = $42, img4 = $43, img5 = $44, img6 = $45, img7 = $46, video = $47, bgcolor = $48, color = $49 WHERE id = 1
     `, [navlink1, navlink2, navlink3, navlink4,
       slide1, slide2, slide3,
       abouth1, aboutp,
@@ -370,7 +370,7 @@ app.post("/editMainPage", checkAuth, checkRole(2), (req, res) => {
       newsh1, newcardh2_1, newcardp1,
       newcardh2_2, newcardp2,
       newcardh2_3, newcardp3,
-      footerh1, footerp, img1, img2, img3, img4, img5, img6, img7, video],
+      footerh1, footerp, img1, img2, img3, img4, img5, img6, img7, video, bgcolor, color],
     (err) => {
       if (err) {
         console.error(err);
