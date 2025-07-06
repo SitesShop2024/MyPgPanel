@@ -388,7 +388,7 @@ app.get("/editAboutPage", checkAuth, checkRole(2), (req, res) => {
       return res.status(500).send("Server error");
     }
     const AboutPageContent = result.rows[0];
-    client.query("SELECT * FROM AboutPageContent LIMIT 1", (err, result) => {
+    client.query("SELECT * FROM MainPageContent LIMIT 1", (err, result) => {
     if (err) {
       console.error(err);
       return res.status(500).send("Server error");
