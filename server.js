@@ -251,7 +251,17 @@ app.get("/debug/about", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.render("login", { error: null });
+  client.query("SELECT * FROM MainPageContent LIMIT 1", (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Server error");
+    }
+    res.render("login", {
+      title: "Login Page",
+      MainPageContent: result.rows[0],
+      error: null,
+    });
+  });
 });
 
 app.post("/login", (req, res) => {
