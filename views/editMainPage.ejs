@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="MainPageEdit.css" />
   </head>
-  <body>
+  <body style="background-color: <%= MainPageContent.bgcolor %>;">
     <ul>
       <li><a href="/admin">Admin Panel</a></li>
       <li><a href="/gallery">Gallery of this website</a></li>
@@ -19,6 +19,22 @@
 
     <div class="form">
       <form action="/editMainPage" method="POST">
+        <div class="colors">
+          <div>
+            <label>Background color</label>
+            <textarea name="bgcolor" required><%= MainPageContent.bgcolor %></textarea>
+            <div class="bgcolor" style="background-color: <%= MainPageContent.bgcolor %>;">
+
+            </div>
+          </div>
+          <div>
+            <label>Text Color</label>
+            <textarea name="color" required><%= MainPageContent.color %></textarea>
+            <div class="color" style="background-color: <%= MainPageContent.color %>;">
+
+            </div>
+          </div>
+        </div>
         <div class="navlinks">
           <div>
             <label>Navbar Link</label>
@@ -129,7 +145,6 @@
                 >
               </div>
             </div>
-            <br /><br />
           </div>
           <div>
             <label>See More Button text</label>
@@ -283,9 +298,9 @@
           </div>
         </div>
         <div class="footer">
-          <label>Footer</label>
+          <label class="footerEdith1">Footer</label>
           <br />
-          <div style="footerEdith1">
+          <div class="footerContent">
             <div>
               <label>Title</label>
               <textarea name="footerh1" required>
