@@ -11,6 +11,9 @@ form{
     margin-bottom: 50px;
     background-color: white;
 }
+.aboutForm{
+    height: 300px;
+}
 label{
     color: black;
 }
