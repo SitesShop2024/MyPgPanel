@@ -400,7 +400,17 @@ app.post("/editAboutPage", checkAuth, checkRole(2), (req, res) => {
 
 // Группа роутов, требующих роли 3 (главный админ)
 app.get("/addAdmin", checkAuth, checkRole(3), (req, res) => {
-  res.render("addAdmin");
+  client.query("SELECT * FROM MainPageContent LIMIT 1", (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Server error");
+    }
+    res.render("addAdmin", {
+      title: "Add New Admin",
+      MainPageContent: result.rows[0],
+      error: null,
+    });
+  });
 });
 
 app.post("/addAdmin", checkAuth, checkRole(3), (req, res) => {
@@ -423,7 +433,17 @@ app.post("/addAdmin", checkAuth, checkRole(3), (req, res) => {
 });
 
 app.get("/deleteAdmin", checkAuth, checkRole(3), (req, res) => {
-  res.render("deleteAdmin");
+  client.query("SELECT * FROM MainPageContent LIMIT 1", (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Server error");
+    }
+    res.render("deleteAdmin", {
+      title: "Delete Admin",
+      MainPageContent: result.rows[0],
+      error: null,
+    });
+  });
 });
 
 app.post("/deleteAdmin", checkAuth, checkRole(3), (req, res) => {
@@ -463,7 +483,15 @@ app.get("/admins", checkAuth, checkRole(3), (req, res) => {
       console.error(err);
       return res.status(500).send("Server error");
     }
-    res.render("admins", { admins: result.rows });
+    client.query("SELECT * FROM MainPageContent LIMIT 1", (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Server error");
+    }
+      res.render("admins", { admins: result.rows, 
+      MainPageContent: result.rows[0],
+      error: null, });
+  });
   });
 });
 
